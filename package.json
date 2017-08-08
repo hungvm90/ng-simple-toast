@@ -1,0 +1,46 @@
+{
+  "name": "ng-simple-toast",
+  "version": "1.0.0",
+  "description": "Simple toast message for angular 2+",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist || true",
+    "copy": "copyfiles package.json dist/",
+    "prepublish": "npm run transpile && npm run package && npm run minify",
+    "transpile": "ngc -p tsconfig.json",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/ng-simple-toast.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng-simple-toast.umd.min.js",
+    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungvm90/ng-simple-toast.git"
+  },
+  "keywords": [
+    "toast",
+    "angular",
+    "simple"
+  ],
+  "author": "hungvm.ict@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungvm90/ng-simple-toast/issues"
+  },
+  "homepage": "https://github.com/hungvm90/ng-simple-toast#readme",
+  "devDependencies": {
+    "@angular/common": "^4.3.3",
+    "@angular/compiler": "^4.3.3",
+    "@angular/compiler-cli": "^4.3.3",
+    "@angular/core": "^4.3.3",
+    "@angular/platform-browser": "^4.3.3",
+    "@angular/router": "^4.3.3",
+    "copyfiles": "^1.2.0",
+    "rollup": "^0.45.2",
+    "rxjs": "^5.4.2",
+    "typescript": "^2.4.2",
+    "uglify-js": "^3.0.27",
+    "zone.js": "^0.8.16"
+  }
+}

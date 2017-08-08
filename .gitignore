@@ -1,0 +1,12 @@
+# Node
+node_modules/*
+npm-debug.log
+typings
+dist/**/*.js
+dist/**/*.d.ts
+dist/**/*.json
+aot
+
+# TypeScript
+*.map
+*.d.ts
