@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist || true",
     "copy": "copyfiles package.json dist/",
-    "prepublish": "npm run transpile && npm run package && npm run minify",
     "transpile": "ngc -p tsconfig.json",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/ng-simple-toast.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng-simple-toast.umd.min.js",

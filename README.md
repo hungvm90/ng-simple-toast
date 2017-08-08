@@ -1,0 +1,3 @@
+- Simple toast alert for angular 4
+- required bootstrap css
+- Example in examples folder
